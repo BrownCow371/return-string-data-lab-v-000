@@ -6,13 +6,14 @@
       <li><strong><%=product.name%></strong></li>
       <li id="list-<%=product.id%>"> <%=truncate product.description%></li>
       <li><%= product.inventory? ? "Available" : "Sold Out"%> </li>
-      <button class="js-more" type="button" name="More Info" data-id="<%=product.id%>">More Info</button><br>
+      <button class="js-more" data-id="<%= product.id %>">More Info</button>
+        <br>
 
     <%end%>
   </ul>
 </div>
 
-<script type="text/javascript" charset="utf-8">
+<!-- <script type="text/javascript" charset="utf-8">
   $(function(){
     $(".js-more").on('click', function(){
       let id = $(this).data('id');
@@ -21,10 +22,10 @@
       })
     })
   })
-</script>
+</script> -->
 
 
-<!-- <script type="text/javascript" charset="utf-8">
+<script type="text/javascript" charset="utf-8">
 $(function() {
   $(".js-more").on("click", function() {
     var id = $(this).data("id");
@@ -40,4 +41,4 @@ $(function() {
     });
   });
 });
-</script> -->
+</script>
