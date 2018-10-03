@@ -5,7 +5,7 @@
     <%@products.each do |product|%>
       <li><strong><%=product.name%></strong></li>
       <li id="list-<%=product.id%>"> <%=truncate product.description%></li>
-      <li><%= product.inventory? ? "Available" : "Sold Out"%> </li>
+      <!-- <li><%#= product.inventory? ? "Available" : "Sold Out"%> </li> -->
       <button class="js-more" data-id="<%= product.id %>">More Info</button>
         <br>
 
